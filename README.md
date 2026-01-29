@@ -1,5 +1,7 @@
 ## Aastrbot抽二次元老婆插件图床仓库
 
+## 最近替换低清/动画截图，如有遗漏，欢迎提出。
+
 **如果需要快速响应，请下载全部图片放入AstrBot\data\plugin_data\astrbot_plugin_animewifex\img\wife目录。**
 
 ## GitHub 获取
