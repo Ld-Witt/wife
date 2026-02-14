@@ -6,7 +6,17 @@
 
 ## GitHub 获取
 
-**如果你的BOT能够正常访问GitHub获取图片，图片服务器基础 URL填写：https://raw.githubusercontent.com/monbed/wife/main/ 图片列表 URL填写：https://animewife.dpdns.org/list.txt**
+**如果你的BOT能够正常访问GitHub获取图片，图片服务器基础 URL填写：https://raw.githubusercontent.com/monbed/wife/main/**
+
+**图片列表 URL填写：https://animewife.dpdns.org/list.txt**
+
+**或者使用可以直连的反代（自行测试网络问题）如：**
+
+**https://fastly.jsdelivr.net/gh/monbed/wife@main/**
+
+**https://cdn.jsdmirror.com/gh/monbed/wife@main/**
+
+**图片列表同上**
 
 ## Deno Deploy部署
 **相比Cloudflare Workers，优点是免代理访问。**
