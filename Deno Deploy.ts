@@ -15,7 +15,8 @@ async function handleRequest(request: Request): Promise<Response> {
   }
 
   // 图片代理
-  const imgUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${path}`;
+  // const imgUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${path}`;
+  const imgUrl = `https://cdn.jsdelivr.net/gh/${OWNER}/${REPO}@${BRANCH}/${path}`;
   const response = await fetch(imgUrl);
 
   if (response.ok) {

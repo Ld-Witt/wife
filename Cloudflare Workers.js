@@ -29,7 +29,8 @@ async function handleRequest(event) {
   if (response) return response
 
   // 从 GitHub 获取图片
-  const imageUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${path}`
+  // const imageUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${path}`
+  const imageUrl = `https://cdn.jsdelivr.net/gh/${OWNER}/${REPO}@${BRANCH}/${path}`
   response = await fetch(imageUrl)
 
   if (!response.ok) {
