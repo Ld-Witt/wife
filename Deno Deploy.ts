@@ -31,7 +31,7 @@ async function handleRequest(request: Request): Promise<Response> {
     const names = tree
       .filter((e: any) => e.type === "blob")
       .filter((e: any) => e.path.startsWith("img1/") || e.path.startsWith("img2/"))
-      .map((e: any) => e.path.replace(/^img[12]\//, ""));
+      .map((e: any) => e.path);
 
     return new Response(names.join("\n"), {
       headers: { "Content-Type": "text/plain; charset=utf-8" },
@@ -39,22 +39,16 @@ async function handleRequest(request: Request): Promise<Response> {
   }
 
   // 处理图片代理
-  const imgPaths = [
-    `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/img1/${path}`,
-    `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/img2/${path}`,
-  ];
-
-  // 尝试获取图片
-  for (const imgUrl of imgPaths) {
-    const response = await fetch(imgUrl);
-    if (response.ok) {
-      return new Response(response.body, {
-        headers: {
-          "Content-Type": response.headers.get("Content-Type") || "image/jpeg",
-          "Cache-Control": "public, max-age=86400",
-        },
-      });
-    }
+  const imgUrl = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${path}`;
+  const response = await fetch(imgUrl);
+  
+  if (response.ok) {
+    return new Response(response.body, {
+      headers: {
+        "Content-Type": response.headers.get("Content-Type") || "image/jpeg",
+        "Cache-Control": "public, max-age=86400",
+      },
+    });
   }
 
   return new Response("未找到该图片", { status: 404 });
