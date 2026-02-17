@@ -21,14 +21,14 @@
 ## Deno Deploy部署
 **相比Cloudflare Workers，优点是免代理访问。**
 
-**首页：https://console.deno.com/**
+**首页：https://dash.deno.com/**
 
 **先注册登陆，点击`New Playground`**
 ![D1](/D1.png)
-**复制粘贴 [Deno Deploy.ts](https://raw.githubusercontent.com/monbed/wife/refs/heads/main/Deno%20Deploy.ts) 中的代码，然后点击`Deploy`。**
+**复制粘贴 [Deno Deploy.ts](https://raw.githubusercontent.com/monbed/wife/refs/heads/main/Deno%20Deploy.ts) 中的代码，然后点击`Save Deploy`。**
 ![D2](/D2.png)
-**图片服务器基础 URL填写：https://你的项目名.你的用户名.deno.net**
-![D3](/D3.png)
+**图片服务器基础 URL填写上面获取到的**
+
 **图片列表 URL填写：https://animewife.dpdns.org/list.txt**
 
 ## 致谢
