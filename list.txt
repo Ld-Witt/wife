@@ -41,3 +41,8 @@ img3/海姆达尔!里芙.png
 img3/耶洛沙!奥尔洛娃女公爵.png
 img3/董事会!派.png
 img3/董事会!陶.png
+img4/吉诺拉生物!米拉.png
+img4/世界树!卡罗琳.png
+img4/世界树!露娜.png
+img4/世界树!瑟茜.png
+img4/新恒提罗!米娅妈妈.png
